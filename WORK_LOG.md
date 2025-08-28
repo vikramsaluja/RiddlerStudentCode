@@ -1,9 +1,12 @@
-Name: YOUR NAME HERE
+Name: Vikram Saluja
 
-| Date   |    Time    |                                                                    Update |
-|:-------|:----------:|--------------------------------------------------------------------------:|
-| Aug 22 |  8-8:30pm  | I started by thinking about my place in the universe.<br/>It was scary... |
-|        |            |                                                             And then I... |
+| Date   |      Time       |                                                                                                                                                                                                                                                                                                                                                                   Update |
+|:-------|:---------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Aug 22 |    8-8:30pm     |                                                                                                                                                                                                                                                                                                I started by thinking about my place in the universe.<br/>It was scary... |
+|        |                 |                                                                                                                                                                                                                                                                                                                                                            And then I... |
+| Aug 22 | 11:40am-12:10pm |                                                                                                                                                                                                                                                                                                      I worked with my table group to solve the first 3 levels of puzzles |
+| Aug 26 |  7:50 - 8:25pm  |                                                                                                                                                                                                                                                  I was thinking about how to put the first decyption into actual code since I know that each letter must be shifted by 9 |
+| Aug 27 |  4:40 - 5:55pm  | I started by thinking about how code the decryption of the second riddle by using the number's ascii values. From there I was able to decrypt the riddle except for the last number since there was no space following that number. Then I thought about how I fix that issue and decided to check for the ascii value of the last number after my main loop had ended.  |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
