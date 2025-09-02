@@ -19,9 +19,17 @@ public class Riddler {
             char c = encrypted.charAt(i);
             // Make sure that 'c' is a letter and no punctation or a space
             if(Character.isLetter(c)){
-                int offset = (c - 'a' + shift) % 26;
-                // Add the shifted charecter to the result
-                decrypted += (char)('a' + offset);
+                // Check if the letter is uppercase or lowercase
+                if(Character.isUpperCase(c)){
+                    int offset = (c - 'A' + shift) % 26;
+                    // Add the shifted character to the result
+                    decrypted += (char)('a' + offset);
+                }
+                else{
+                    int offset = (c - 'a' + shift) % 26;
+                    // Add the shifted character to the result
+                    decrypted += (char)('a' + offset);
+                }
             }
             else {
                 // Add space and puncuation to the result
@@ -68,7 +76,15 @@ public class Riddler {
     public String decryptThree(String encrypted) {
         String decrypted = "";
 
-        // TODO: Complete the decryptThree() function.
+        // For the loop where 'i' increases by 8
+        for(int i = 0;  i < encrypted.length(); i+= 8){
+            // Get the next 8 values of the binary encryption
+            String part = encrypted.substring(i, i + 8);
+            int num = Integer.parseInt(part, 2);
+
+            // Cast num to char
+            decrypted += (char)(num);
+        }
 
         return decrypted;
     }
@@ -76,7 +92,27 @@ public class Riddler {
     public String decryptFour(String encrypted) {
         String decrypted = "";
 
-        // TODO: Complete the decryptFour() function.
+        int base = 0x2700;
+        int shift = 9919;
+
+        for(int i = 0; i < encrypted.length(); i++){
+            // Get the charecter
+            char part = encrypted.charAt(i);
+            // Convert part into actual number
+            int num = part - base;
+
+            int decryptedNum = (num - shift) % 26;
+
+            // If it is a negative value, ensure that it wraps around
+            if (decryptedNum < 0){
+                decryptedNum += 26;
+            }
+            // Shift into alphabet
+            char decryptedChar = (char) ('A' + decryptedNum);
+            // Add char to decrypted message
+            decrypted += decryptedChar;
+
+        }
 
         return decrypted;
     }
